@@ -1,4 +1,4 @@
-# Prototyping Platform
+# Listening Post
 
 ## Project setup
 ```
