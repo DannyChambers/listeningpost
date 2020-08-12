@@ -1,0 +1,88 @@
+.text-input {
+	margin-bottom: $spacing-half;
+	position: relative;
+	
+	.label {
+		font-size: $_14px;
+		line-height: $dimension-full;
+		font-family: $font-family-regular;
+	}
+
+	input {
+		box-sizing: border-box;
+		display: block;
+		width: 100%;
+		max-width: $breakpoint-2;
+		margin-bottom: $spacing-half;
+		padding: 0 $spacing-quarter;
+		border: 1px solid $line-colour-1;
+		border-radius: $radius-full;
+		line-height: $dimension-full;
+		font-size: $_14px;
+		font-family: $font-family-regular;
+		-webkit-appearance: none;
+		background: $background-colour-1;
+		@include fadeIn(border-color);
+
+		&:hover {
+			border-color: $action-colour;
+		}
+
+		&:focus {
+			outline: none;
+			border-color: $active-colour;
+		}
+
+		&:disabled {
+			background: $pattern-white-2;
+
+			&:hover {
+				border-color: $line-colour-1;
+			}
+	
+			&:focus {
+				border-color: $line-colour-1;
+			}
+		}
+	}
+
+	.icon--before {
+		position: absolute;
+		top: 50%;
+		margin-top: -$spacing-quarter;
+		left: $spacing-quarter;
+
+		&:before {
+			color: $text-colour-1;
+		}
+	}
+
+	.icon--after {
+		position: absolute;
+		top: 50%;
+		margin-top: -$spacing-quarter;
+		right: $spacing-quarter;
+
+		&:after {
+			color: $text-colour-1;
+		}
+	}
+	
+	.t3 {
+		margin: 0;
+		padding-bottom: $spacing-half;
+	}
+}
+
+@media only screen and (min-width : $breakpoint-3){
+
+	.text-input {
+		margin-bottom: $spacing-full;
+	
+		input {
+			padding: 0 $spacing-full;
+			line-height: calc( #{$dimension-full} + #{$dimension-half});
+			font-size: $_16px;
+		}
+	}
+}

@@ -1,0 +1,56 @@
+.accordion {
+
+	.accordion_header {
+		font-family: $font-family-bold;
+		cursor: pointer;
+
+		.icon--after {
+			display: inline-block;
+			margin: 0 0 0 $spacing-quarter;
+			position: relative;
+			top: 2px;
+			transform: rotate(180deg);
+			transition: transform .2s ease-in-out;
+
+			&:after {
+				font-size: $_30px;
+			}
+		}
+	}
+
+	&.accordion--hidden {
+
+		.accordion_header {
+			font-family: $font-family-bold;
+	
+			.icon--after {
+				top: 5px;
+				transform: rotate(0deg)
+			}
+		}
+
+		.accordion_content {
+			display: none;
+		}
+	}
+}
+
+@media only screen and (min-width : $breakpoint-3){
+
+	.accordion {
+
+		&.accordion--handheld {
+
+			.accordion_header {
+				display: none;
+			}
+		
+			&.accordion--hidden {
+		
+				.accordion_content {
+					display: block;
+				}
+			}
+		}
+	}
+}

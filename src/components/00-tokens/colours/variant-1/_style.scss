@@ -1,0 +1,120 @@
+
+/*------------------------------------*\
+    #COLOURS
+\*------------------------------------*/
+
+//Raw palette --
+
+//Pattern system colours
+
+$pattern-black-1: #000000;
+$brand-1: $pattern-black-1;
+
+$pattern-black-2: #222222;
+$brand-2: $pattern-black-2;
+
+$pattern-white-1: #ffffff;
+$brand-3: $pattern-white-1;
+
+$pattern-white-2: #f0f0f0;
+$brand-4: $pattern-white-2;
+
+$pattern-grey-1: #999999;
+$brand-5: $pattern-grey-1;
+
+$pattern-grey-2: #cccccc;
+$brand-6: $pattern-grey-2;
+
+$pattern-grey-3: #eeeeee;
+$brand-6: $pattern-grey-3;
+
+$pattern-grey-4: #E0E4F1;
+
+$pattern-green-1: #5d913f;
+$brand-7: $pattern-green-1;
+
+$pattern-blue-1: #24cfe2;
+$brand-8: $pattern-blue-1;
+
+$pattern-orange-1: #CA5E40;
+$brand-9: $pattern-orange-1;
+
+$pattern-red-1: #b91438;
+$brand-10: $pattern-red-1;
+
+
+//Functional pallette --
+
+$line-colour-1: $brand-5;
+$line-colour-2: $brand-6;
+$shadow-colour-1: $brand-6;
+
+$action-colour: $brand-8;
+$active-colour: $brand-9;
+
+$link-colour-1: $action-colour;
+
+$background-colour-1: $brand-3;
+$background-colour-1: $brand-6;
+
+$text-colour-1: $brand-2;
+$text-colour-2: $brand-3;
+$text-colour-3: $brand-5;
+
+$primary-button-background: $action-colour;
+$primary-button-background-hover: darken($action-colour, 10%);
+$primary-button-border: $action-colour;
+$primary-button-border-hover: $action-colour;
+$primary-button-colour: $text-colour-2;
+$primary-button-colour-hover: $text-colour-2;
+$primary-button-background-disabled: $text-colour-1;
+$primary-button-border-disabled: $brand-6;
+$primary-button-colour-disabled: $brand-6;
+
+$secondary-button-background: $brand-9;
+$secondary-button-background-hover: $brand-9;
+$secondary-button-border: $brand-9;
+$secondary-button-border-hover: $brand-9;
+$secondary-button-colour: $text-colour-2;
+$secondary-button-colour-hover: $text-colour-1;
+$secondary-button-background-disabled: $brand-6;
+$secondary-button-border-disabled: $brand-6;
+$secondary-button-colour-disabled: $brand-6;
+
+$message-colour-success: $brand-7;
+$message-colour-warning: $brand-9;
+$message-colour-information: $text-colour-1;
+$message-colour-error: $pattern-red-1;
+
+$message-background-success: $brand-7;
+$message-background-warning: $brand-7;
+$message-background-information: $brand-8;
+$message-background-error: $brand-10;
+
+.token-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    .t2 {
+        margin: 0;
+        text-align: center;
+        color: #666;
+        padding-left: 0;
+
+        &:before {
+            display: none;
+        }
+
+        > div {
+            border: 1px solid #ccc;
+            border-width: 1px 0 0 0;
+            padding: 20px;
+        }
+    }
+}
+
+
+
+
+ 

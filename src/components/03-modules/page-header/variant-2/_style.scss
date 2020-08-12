@@ -1,0 +1,56 @@
+
+.page-header {
+	padding: $spacing-half $spacing-full;
+	position: relative;
+	overflow: hidden;
+
+	.logo {
+		margin: 0 auto;
+		width: 100px;
+	}
+
+	.primary-navigation_trigger {
+		position: absolute;
+		top: $spacing-half;
+		right: $spacing-half;
+		width: $dimension-full;
+		padding: 0 !important;
+	
+		.icon--after {
+	
+			&:after {
+				font-size: $_20px;
+				color: $pattern-grey-1;
+			}
+		}
+	} 
+}
+
+@media only screen and (min-width : $breakpoint-3){
+
+	.page-header {
+		padding: $spacing-half $spacing-full $spacing-half 295px;
+
+		.container {
+			min-height: 0;
+		}
+	
+		.logo {
+			margin: 0;
+			position: absolute;
+			top: $spacing-half;
+			left: $spacing-triple;
+		}
+
+		.primary-navigation_trigger {
+			display: none !important;
+		}
+
+		/deep/.greeting {
+			float: left;
+			margin: $spacing-half 0 0 0;
+			padding: 0;
+			line-height: $_50px;
+		}
+	}
+}

@@ -1,0 +1,64 @@
+
+.textarea {
+	max-width: $breakpoint-2;
+	margin-bottom: $spacing-half;
+
+	.label {
+		font-size: $_14px;
+		line-height: $dimension-full;
+		font-family: $font-family-regular;
+	}
+
+	.textarea_input {
+		box-sizing: border-box;
+		display: block;
+		width: calc(100% - #{$spacing-half});
+		padding: $spacing-quarter;
+		margin-bottom: $spacing-quarter;
+		border: 1px solid $line-colour-1;
+		border-radius: $radius-full;
+		font-family: $font-family-regular;
+		font-size: $_14px;
+		line-height: 1.6rem;
+		-webkit-appearance: none;
+		background: $background-colour-1;
+		box-sizing: content-box;
+		resize: none;
+		overflow: hidden;
+		transition: height .1s ease-in-out, border-color .3s ease-in-out;
+
+		&:hover {
+			border-color: $action-colour;
+		}
+
+		&:focus {
+			outline: none;
+			border-color: $active-colour;
+		}
+
+		&:disabled {
+			background: $pattern-white-2;
+
+			&:hover {
+				border-color: $line-colour-1;
+			}
+	
+			&:focus {
+				border-color: $line-colour-1;
+			}
+		}
+	}
+
+	.t3 {
+		margin: $spacing-half 0 0 0;
+	}
+}
+
+@media only screen and (min-width : $breakpoint-3){
+
+	.textarea {
+		margin-bottom: $spacing-full;
+		font-size: $_16px;
+	}
+}
+

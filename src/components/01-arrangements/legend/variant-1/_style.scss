@@ -1,0 +1,16 @@
+
+.legend  {
+	margin: 0 0 $spacing-full 0;
+	font-weight: 400;
+	line-height: 1.15;
+	font-family: $font-family-heading;
+	color: $text-colour-1; 
+	font-size: $_16px;
+}
+
+@media only screen and (min-width : $breakpoint-4){
+
+	.legend  {
+		font-size: $_25px;
+	}
+}

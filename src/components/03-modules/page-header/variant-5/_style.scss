@@ -1,0 +1,51 @@
+
+.page-header {
+	padding: $dimension-half;
+	background: $pattern-black-1;
+
+	.container {
+		min-height: 0;
+		padding: 0;
+		max-width: $breakpoint-4;
+		overflow: hidden;
+
+		.logo {
+			margin: 0;
+		}
+
+		.primary-navigation_trigger {
+			position: absolute;
+			top: -$spacing-quarter;
+			right: -$spacing-quarter;
+			width: $dimension-full;
+			padding: 0 !important;
+		
+			.icon--after {
+		
+				&:after {
+					font-size: $_20px;
+					color: $pattern-white-1;
+				}
+			}
+		} 
+	}
+}
+
+@media only screen and (min-width : $breakpoint-3){
+
+	.page-header {
+		padding: 0;
+
+		.container {
+
+			.logo {
+				float: left;
+				margin: $spacing-half 0 0 $spacing-full;
+			}
+
+			.primary-navigation_trigger {
+				display: none !important;
+			}
+		}
+	}
+}

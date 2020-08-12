@@ -1,0 +1,45 @@
+
+.pane {
+	box-sizing: border-box;
+	padding: 0;
+	background-size: cover;
+	background-position: center center;
+
+	/deep/.pane {//For panes used in the page as banners and such
+		padding: $spacing-full;
+	}
+
+	&.pane--vertical {
+		display: table;
+		width: 100%;
+
+		.pane_inner {
+			display: table-cell;
+			vertical-align: middle;
+		}
+	}
+
+	&.pane--page {
+		display: table;
+		width: 100%;
+		min-height: 80vh;
+
+		.pane_inner {
+			display: table-cell;
+			vertical-align: middle;
+		}
+	}
+
+	.pane_inner {
+
+	}
+}
+
+
+@media only screen and (min-width : $breakpoint-2){
+
+	.pane {
+		padding: $spacing-full $spacing-double;
+	}
+}
+

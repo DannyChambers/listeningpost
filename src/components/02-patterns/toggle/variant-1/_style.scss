@@ -1,0 +1,91 @@
+
+.toggle {
+	margin-bottom: $spacing-half;
+
+	.label {
+		font-size: $_14px;
+		line-height: $dimension-full;
+		font-family: $font-family-regular;
+	}
+
+	.toggle_switch {
+		background: $background-colour-1;
+		width: calc(#{$dimension-double} - #{$dimension-quarter});
+		height: calc(#{$dimension-full} - 2px);
+		border: 1px solid $line-colour-1;
+		border-radius: $dimension-full;
+		position: relative;
+		overflow: hidden;
+		@include fadeIn(border-color);
+
+		&:hover {
+			border-color: $action-colour;
+		}
+
+		&:focus, &:active {
+			border-color: $active-colour;
+		}
+
+		&:disabled {
+			background: $pattern-white-2;
+
+			&:hover {
+				border-color: $line-colour-1;
+			}
+	
+			&:focus {
+				border-color: $line-colour-1;
+			}
+		}
+
+		em {
+			display: block;
+			width: $dimension-double;
+			height: $dimension-full;
+			background: $message-background-success;
+			position: absolute;
+			top: -1px;
+			left: 0;
+			@include slide(opacity);
+			opacity: 0;
+		}
+
+		.toggle_input {
+			-webkit-appearance: none;
+			display: block;
+			width: $dimension-full;
+			height: $dimension-full;
+			background: $line-colour-1;
+			border-radius: $dimension-full;
+			cursor: pointer;
+			position: absolute;
+			top: -4px;
+			left: -4px;
+			z-index: 99;
+			@include slide(left);
+
+			&:focus {
+				outline: none;
+			}
+
+			&:checked {
+				left: calc(#{$dimension-full} - #{$dimension-quarter});
+			}
+
+			&:checked + em {
+				opacity: 1;
+			}
+		}
+	}
+
+	.t3 {
+		margin: 0;
+	}
+}
+
+@media only screen and (min-width : $breakpoint-3){
+
+	.toggle {
+		margin-bottom: $spacing-full;
+	}
+}

@@ -1,0 +1,82 @@
+
+.radio-buttons {
+	padding: $spacing-full 0;
+	border: none;
+
+	.legend {
+		font-family: $font-family-regular;
+		font-size: $_14px;
+		line-height: calc(#{$dimension-half} + 1px);
+	}
+
+	.label {
+		display: block;
+		position: relative;
+		margin-bottom: $spacing-half;
+		padding-left: calc(#{$dimension-half} + #{$dimension-quarter});
+		line-height: $_30px;
+
+		.label_text, .option_text {
+			font-family: $font-family-regular;
+			font-size: $_16px;
+			line-height: calc(#{$dimension-half} + 1px);
+		}
+
+		.option_text {
+			display: block;
+		}
+
+		input {
+			width: calc(#{$dimension-half} + 2px);
+			height: calc(#{$dimension-half} + 2px);
+			position: absolute;
+			top: 3px;
+			left: 0;
+			-webkit-appearance: none;
+			opacity: 0;
+			z-index: 99;
+			cursor: pointer;
+
+
+			&:focus ~ em:before {
+				border-color: $active-colour;
+			}
+
+			&:hover ~ em:before {
+				border-color: $action-colour;
+			}
+
+			&:checked ~ em:before {
+				content: "•";
+				border-color: $line-colour-1;
+				font-size: $_34px;
+				color: $text-colour-1;
+			}
+		}
+
+		em {
+			font-style: normal;
+
+			&:before {
+				content: " ";
+				display: block;
+				position: absolute;
+				top: 3px;
+				left: 0;
+				width: $dimension-half;
+				height: $dimension-half;
+				line-height: calc(#{$dimension-half} + 1px);
+				text-indent: .5px;
+				text-align: center;	
+				border: 1px solid $line-colour-1;
+				background: $background-colour-1;
+				border-radius: $dimension-half;
+				transition: border-color .3s ease-in-out;
+			}
+		}
+	}
+
+	.t3 {
+		margin: 0;
+	}
+}

@@ -1,0 +1,35 @@
+
+.callout {
+	padding: $spacing-full;
+	background: $line-colour-1;
+	margin-bottom: $spacing-full;
+
+	&.callout--shadowed {
+		background: $pattern-white-1;
+		margin: $spacing-full 0 $spacing-double 0;
+		box-shadow: 0px 0px $spacing-double -$spacing-half lighten($line-colour-2, 50%);
+	}
+
+	/deep/p {
+
+		&:first-child {
+			padding-top: 0;
+		}
+
+		&:last-child {
+			padding-bottom: 0;
+		}
+	}
+}
+
+
+@media only screen and (min-width : $breakpoint-2){
+
+	.callout {
+	
+		&.callout--shadowed {
+			box-shadow: 0px 0px $spacing-quadruple -$spacing-full lighten($line-colour-2, 50%);
+		}
+	}
+}
+

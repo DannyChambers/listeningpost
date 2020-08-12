@@ -1,0 +1,152 @@
+
+.icon--before, .icon--after {
+
+	&:before, &:after {
+		content: " ";
+		font-family: $font-family-icon;
+	}
+
+	&.icon--logout {
+		
+		&:before, &:after {
+			content: "\e90c"; 
+		}
+	}
+
+	&.icon--home {
+		
+		&:before, &:after {
+			content: "\e90a"; 
+		}
+	}
+
+	&.icon--star {
+		
+		&:before, &:after {
+			content: "\e906"; 
+		}
+	}
+
+	&.icon--checkmark {
+		
+		&:before, &:after {
+			content: "\e910"; 
+		}
+	}
+
+	&.icon--cheveron {
+		
+		&:before, &:after {
+			content: "\e911"; 
+		}
+	}
+
+	&.icon--close {
+		
+		&:before, &:after {
+			content: "\e912"; 
+		}
+	}
+
+	&.icon--menu {
+		
+		&:before, &:after {
+			content: "\e600"; 
+		}
+	}
+
+	&.icon--envelope {
+		
+		&:before, &:after {
+			content: "\e913"; 
+		}
+	}
+
+	&.icon--mood-happy-outline {
+		
+		&:before, &:after {
+			content: "\e914"; 
+		}
+	}
+
+	&.icon--mood-neutral-outline {
+		
+		&:before, &:after {
+			content: "\e915"; 
+		}
+	}
+
+	&.icon--mood-sad-outline {
+		
+		&:before, &:after {
+			content: "\e916"; 
+		}
+	}
+
+	&.icon--search {
+		
+		&:before, &:after {
+			content: "\e917"; 
+		}
+	}
+
+}
+
+.icon--before {
+
+	&:after {
+		display: none;
+	}
+
+}
+
+.icon--after {
+
+	&:before {
+		display: none;
+	}
+
+}
+
+.token-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    .t2 {
+        margin: 0;
+        color: #666;
+
+        > div {
+            border: 1px solid #ccc;
+            border-width: 1px 0 0 0;
+			padding: 20px;
+			
+			.icon--before {
+				display: block;
+				color: $brand-1;
+				font-size: $_30px;
+			}
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

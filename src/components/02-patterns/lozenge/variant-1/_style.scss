@@ -1,0 +1,63 @@
+
+.lozenge {
+	display: inline-block;
+	line-height: 2em;
+	font-size: $_14px;
+	margin-bottom: $spacing-full;
+	padding: 0 $spacing-full;
+	font-family: $font-family-regular;
+	color: $action-colour;
+	background: lighten($link-colour, 40%);
+	text-decoration: none;
+	border: 1px solid transparent;
+	border-radius: $radius-quadruple;
+	letter-spacing: 1px;
+
+	&.lozenge--coral {
+		background: lighten($coral, 40%);
+		color: $coral;
+	}
+
+	&.lozenge--gold {
+		background: lighten($gold, 40%);
+		color: $gold;
+	}
+
+	&.lozenge--turquoise {
+		background: lighten($turquoise, 40%);
+		color: $turquoise;
+	}
+
+	&.lozenge--cobalt {
+		background: lighten($pattern-blue-1;, 40%);
+		color: $pattern-blue-1;
+	}
+
+	&.lozenge--zestgreen {
+		background: lighten($pattern-green-1, 40%);
+		color: $pattern-green-1;
+	}
+
+	&.lozenge--amethyst {
+		background: lighten($amethyst, 40%);
+		color: $amethyst;
+	}
+
+	&.lozenge--eigengrau {
+		background: lighten($eigengrau, 40%);
+		color: $eigengrau;
+	}
+
+	&.lozenge--marengo {
+		background: lighten($marengo, 40%);
+		color: $marengo;
+	}
+}
+
+@media only screen and (min-width : $breakpoint-3){
+
+	.lozenge {
+		font-size: $_16px;
+		padding: 0 $spacing-double;
+	}
+}

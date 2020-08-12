@@ -1,0 +1,21 @@
+{
+	"users": [
+    {
+      "id": "1",
+      "firstname": "Danny",
+      "lastname": "Chambers",
+      "email": "danny@dannychambers.co.uk",
+      "password": "password"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "title": "Product 1 title",
+      "description": "A description of Product 1.",
+      "categories": ["Category 1"],
+      "formats": ["Physical product"],
+      "link": "/product-1/"
+    }
+  ]
+}

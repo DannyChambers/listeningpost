@@ -1,0 +1,124 @@
+
+$gutter-full: $spacing-full;
+
+.layout {
+	display: grid;
+	grid-gap: $spacing-full 0;
+	margin-bottom: $spacing-full;
+
+	.column {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media only screen and (min-width : $breakpoint-3){
+
+	.layout {
+		grid-gap: $spacing-full;
+
+		.column {
+
+			&:last-child {
+				padding-right: 0;
+			}
+		}
+
+		&.layout--50_C {
+			grid-template-columns: 10fr;
+            
+            .column {
+				width: 50%;
+                margin: 0 auto;
+            }
+		}
+
+		&.layout--50_50 {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		&.layout--60_40 {
+			grid-template-columns: 6fr 4fr;
+		}
+
+		&.layout--40_60 {
+			grid-template-columns: 4fr 6fr;
+		}
+
+		&.layout--65_35 {
+			grid-template-columns: 6.5fr 3.5fr;
+		}
+
+		&.layout--35_65 {
+			grid-template-columns: 3.5fr 6.5fr;
+		}
+
+		&.layout--70_30 {
+			grid-template-columns: 7fr 3fr;
+		}
+
+		&.layout--30_70 {
+			grid-template-columns: 3fr 7fr;
+		}
+
+		&.layout--75_25 {
+			grid-template-columns: 7.5fr 2.5fr;
+		}
+
+		&.layout--25_75 {
+			grid-template-columns: 2.5fr 7.5fr;
+		}
+
+		&.layout--20_80 {
+			grid-template-columns: 2fr 8fr;
+		}
+
+		&.layout--80_20 {
+			grid-template-columns: 8fr 2fr;
+		}
+
+		&.layout--33_33_33 {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		&.layout--25_25_25_25 {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		&.layout--20_20_20_20_20 {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+}
+
+
+@media only screen and (min-width : $breakpoint-4){
+
+
+	.layout {
+
+		&.layout--33_33_33 {
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+
+		&.layout--25_25_25_25 {
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+		}
+
+		&.layout--20_20_20_20_20 {
+			grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+		}
+	}
+}
+
+
+// ==========================================================
+//Styles related to the pattern library (Not for production)
+// ==========================================================
+
+.sb-show-main {
+
+	.layout {
+		margin: -8px;//Negate Storybooks body margin
+	}
+}
+

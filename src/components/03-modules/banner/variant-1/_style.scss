@@ -1,0 +1,91 @@
+
+.banner {
+    padding-top: 150px;
+
+    .banner-content {
+
+        /deep/.link {
+            color: $text-colour-1;
+        }
+
+        /deep/.h1 {
+            margin: 0 0 $spacing-full 0;
+            padding: 0;
+            font-size: $_42px;
+            text-transform: none;
+        }
+    }
+
+    &.banner--dark {
+        color: $pattern-white-1;
+
+        .banner-content {
+
+            /deep/.h1 {
+                color: $pattern-white-1;
+            }
+
+            /deep/.t1 {
+                color: $pattern-white-1;
+            }
+
+            /deep/.link {
+                color: $pattern-white-1;
+            }
+        }
+    }
+
+    &.banner--centred {
+        padding: $spacing-double 0 $spacing-full 0;
+
+        .banner-content {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 0;
+            text-align: center;
+        }
+    }
+}
+
+@media only screen and (min-width : $breakpoint-3){
+
+    .banner {
+        padding: $spacing-quadruple $spacing-double;
+
+        &.banner--centred {
+            padding: $spacing-quadruple $spacing-double $spacing-double $spacing-double;
+
+            .banner-content {
+                box-sizing: border-box;
+                width: 100%;
+                padding: 0 $spacing-full;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width : $breakpoint-4){
+
+    .banner {
+        padding: $spacing-quadruple 0;
+
+        .banner-content {
+            width: 50%;
+
+            /deep/.h1 {
+                font-size: $_62px;
+            }
+        }
+
+        &.banner--centred {
+            padding: $spacing-quadruple 0 $spacing-double 0;
+
+            .banner-content {
+
+                /deep/.h1 {
+                    margin-bottom: $spacing-triple;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,52 @@
+
+.page-header {
+	padding: $spacing-full 0 $spacing-half 0;
+	position: relative;
+	background: $pattern-green-1;
+
+	.container {
+		overflow: hidden;
+		padding: 0 $spacing-full;
+	}
+
+	/deep/.logo {
+		margin: 0;
+		float: left;
+		width: 100px;
+
+		svg {
+			fill: $white !important;
+		}
+	}
+
+	.primary-navigation_trigger {
+		position: absolute;
+		top: $spacing-half;
+		right: $spacing-half;
+		width: $dimension-full;
+		padding: 0 !important;
+	
+		.icon--after {
+	
+			&:after {
+				font-size: $_20px;
+				color: $pattern-white-1;
+			}
+		}
+	} 
+}
+
+@media only screen and (min-width : $breakpoint-3){
+
+	.page-header {
+		padding: $spacing-half 0;
+	
+		/deep/.logo {
+
+		}
+
+		.primary-navigation_trigger {
+			display: none !important;
+		}
+	}
+}

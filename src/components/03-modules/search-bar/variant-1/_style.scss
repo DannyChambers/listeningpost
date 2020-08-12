@@ -1,0 +1,27 @@
+
+.search-bar {
+	width: 100%;
+	border-bottom: 1px solid $line-colour-1;
+
+	.container {
+		max-width: $breakpoint-4;
+		padding: 0 $spacing-full;
+	}
+
+	/deep/ .text-input {
+		margin: 0;
+
+		.label {
+			display: none;
+		}
+
+		input {
+			margin: 0;
+			padding-left: $dimension-full;
+			border: 0;
+			max-width: none;
+		}
+	}
+
+
+}

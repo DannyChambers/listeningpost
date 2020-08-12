@@ -1,0 +1,84 @@
+
+.ul {
+	margin: $spacing-full 0;
+	padding: 0;
+	list-style: none;
+
+	li {
+		position: relative;
+		padding: 0 0 0 $spacing-full;
+
+		&:before {
+			content: " ";
+			display: block;
+			width: $spacing-quarter;
+			height: $spacing-quarter;
+			background: $pattern-green-1;	
+			position: absolute;
+			top: $dimension-quarter;
+			left: 0;
+			border-radius: $radius-half;
+		}
+	}
+
+	/deep/.t1 {
+		margin: 0 0 $spacing-quarter 0;
+		overflow-wrap: break-word;
+		word-wrap: break-word;
+		-ms-word-break: break-all;
+		word-break: break-word;
+		-ms-hyphens: auto;
+		-moz-hyphens: auto;
+		-webkit-hyphens: auto;
+		hyphens: auto;
+		font-weight: 400;
+		line-height: 1.5;
+		font-size: $_16px;
+		font-family: $font-family-regular;
+
+		&:before {
+			top: 10px;
+		}
+	}
+
+	/deep/.t2 {
+		margin: 0 0 $spacing-quarter 0;
+		overflow-wrap: break-word;
+		word-wrap: break-word;
+		-ms-word-break: break-all;
+		word-break: break-word;
+		-ms-hyphens: auto;
+		-moz-hyphens: auto;
+		-webkit-hyphens: auto;
+		hyphens: auto;
+		font-weight: 400;
+		line-height: 1.5;
+		font-size: $_14px;
+		font-family: $font-family-regular;
+
+		&:before {
+			top: 8px;
+		}
+	}
+
+	/deep/.t3 {
+		margin: 0 0 $spacing-quarter 0;
+		overflow-wrap: break-word;
+		word-wrap: break-word;
+		-ms-word-break: break-all;
+		word-break: break-word;
+		-ms-hyphens: auto;
+		-moz-hyphens: auto;
+		-webkit-hyphens: auto;
+		hyphens: auto;
+		padding: 1em 0 .5em 0;
+		font-weight: 400;
+		line-height: 1.5;
+		font-size: $_12px;
+		font-family: $font-family-regular;
+
+		&:before {
+			top: 5px;
+		}
+	}
+}

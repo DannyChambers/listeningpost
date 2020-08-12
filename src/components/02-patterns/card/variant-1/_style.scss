@@ -1,0 +1,55 @@
+
+.card {
+	display: block;
+	box-sizing: border-box;
+	border: 1px solid $line-colour-1;
+	border-radius: $radius-full;
+	font-family: $font-family-regular;
+	text-decoration: none;
+	background: $pattern-white-1;
+	position: relative;
+	overflow: hidden;
+	margin-bottom: $spacing-full;
+
+	/deep/.card_media {
+
+		img, video {
+			max-width: 100%;
+		}
+	}
+
+	/deep/.card_title {
+		margin: 0;
+		padding: $spacing-half $spacing-full 0 $spacing-full;
+		font-size: $_18px;
+		line-height: $spacing-full;
+		color: $text-colour-1;
+
+		&:first-child {
+			padding-top: $spacing-full;
+		}
+	}
+
+	/deep/.card_content {
+		padding: 0 $spacing-full $spacing-full $spacing-full;
+		color: $text-colour-1;
+
+		:first-child {
+			margin-top: 0;
+		}
+	}
+}
+
+@media only screen and (min-width : $breakpoint-2){
+
+	.card {
+		
+		/deep/.card_title {
+
+		}
+	
+		/deep/.card_content {
+			padding: $spacing-half $spacing-full;
+		}
+	}
+}

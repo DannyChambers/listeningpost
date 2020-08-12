@@ -1,0 +1,17 @@
+
+.container {
+	max-width: $maximum-page-width;
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: $spacing-full;
+	position: relative;
+}
+
+
+@media only screen and (min-width : $breakpoint-3){
+
+	.container {
+		padding: 0 $spacing-full;
+	}
+	
+}

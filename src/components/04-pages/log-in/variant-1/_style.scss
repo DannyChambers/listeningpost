@@ -1,0 +1,21 @@
+
+.log-in-page {
+    background: $background-colour-1;
+    min-height: calc(100vh - 63px);
+    padding-bottom: $spacing-double;
+
+    .pane {
+
+        .pane_inner {
+
+            .container {
+                padding: 0;
+
+                .login-form {
+                    padding: $spacing-full $spacing-double;
+                }
+            }
+        }
+    }
+}
+

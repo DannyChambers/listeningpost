@@ -1,0 +1,26 @@
+
+/*------------------------------------*\
+    #ANIMATIONS
+\*------------------------------------*/
+
+@keyframes fadeInAnim {
+	
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+/*------------------------------------*\
+    #TRANSITIONS
+\*------------------------------------*/
+
+@mixin fadeIn($property) {
+	transition: $property .4s ease-in-out;
+}
+
+@mixin slide($property) {
+	transition: $property .4s ease-in-out;
+}

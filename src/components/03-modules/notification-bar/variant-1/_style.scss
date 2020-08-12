@@ -1,0 +1,101 @@
+
+.notification-bar {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	@include slide(top);
+
+	.button {
+		position: absolute;
+		top: 50%;
+		right: 0;
+		margin-top: -$dimension-half;
+	}
+
+	&.notification-bar--hidden {
+		top: -100vh;
+	}
+
+	&--success {
+		background: $message-background-success;
+		color: $text-colour-2;
+
+		.button--icononly {
+
+			.icon--after {
+				color: $text-colour-2;
+			}
+		}
+	}
+
+	&--information {
+		background: $message-background-information;
+		color: $text-colour-1;
+
+		.button--icononly {
+
+			.icon--after {
+				color: $text-colour-1;
+			}
+		}
+	}
+
+	&--warning {
+		background: $message-background-warning;
+		color: $text-colour-2;
+
+		.button--icononly {
+
+			.icon--after {
+				color: $text-colour-2;
+			}
+		}
+	}
+
+	&--error {
+		background: $message-background-error;
+		color: $text-colour-2;
+
+		.button--icononly {
+
+			.icon--after {
+				color: $text-colour-2;
+			}
+		}
+	}
+
+	.notification-bar_inner {
+		max-width: $maximum-page-width;
+		margin: 0 auto;
+
+		.notification_copy {
+			margin: 0;
+			padding: 0;
+			line-height: $dimension-full;
+			text-align: center;
+
+			.notification_link {
+				display: block;
+				color: $text-colour-2;
+				text-decoration: none;
+
+				.notification_link_text {
+					padding-bottom: $dimension-sixteenth;
+					border-bottom: 1px solid $text-colour-2;
+					border-color: $text-colour-2;
+					@include fadeIn(border-color);
+				}
+
+				&:hover {
+
+					.notification_link_text {
+						border-color: transparent;
+					}	
+				}
+			}
+		}
+	}
+
+
+}

@@ -1,0 +1,39 @@
+
+.link {
+	display: inline-block;
+	font-family: $font-family-regular;
+	color: $action-colour;
+	text-decoration: none;
+
+	.link_text {
+		@include fadeIn(border-color);	
+	}
+
+	&.link--inline {
+
+		.link_text {
+			border-bottom: 1px solid transparent;
+		}
+
+		&:hover {
+
+			.link_text {
+				border-color: $action-colour;
+			}
+		}
+	}
+
+	&.link--standalone {
+		
+		.link_text {
+			border-bottom: 1px solid $action-colour;
+		}
+
+		&:hover {
+
+			.link_text {
+				border-color: transparent;
+			}
+		}
+	}
+}

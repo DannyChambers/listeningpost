@@ -1,0 +1,49 @@
+
+.page-header {
+	padding: $spacing-half 0;
+	position: relative;
+
+	.logo {
+		margin: 0 auto;
+	}
+
+	.primary-navigation_trigger {
+		position: absolute;
+		top: $spacing-half;
+		right: $spacing-half;
+		width: $dimension-full;
+		padding: 0 !important;
+	
+		.icon--after {
+	
+			&:after {
+				font-size: $_20px;
+				color: $pattern-grey-1;
+			}
+		}
+	} 	
+}
+
+@media only screen and (min-width : $breakpoint-3){
+
+	.page-header {
+		padding: $spacing-full 0;
+
+		.container {
+			min-height: 70px;
+		}
+	
+		.logo {
+			width: 135px;
+		}
+
+		.primary-navigation_trigger {
+			display: none !important;
+		}
+
+		/deep/.greeting {
+			margin-top: $dimension-full;
+			padding: 0;
+		}
+	}
+}

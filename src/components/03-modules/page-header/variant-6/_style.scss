@@ -1,0 +1,14 @@
+
+.page-header {
+	box-sizing: border-box;
+	padding: $spacing-half $spacing-full $spacing-half $spacing-full;
+	min-height: 50px;
+	border-bottom: 1px solid $line-colour-1;
+}
+
+@media only screen and (min-width : $breakpoint-3){
+
+	.page-header {
+	
+	}
+}

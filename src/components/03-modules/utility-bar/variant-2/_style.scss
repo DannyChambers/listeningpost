@@ -1,0 +1,85 @@
+
+.utility-bar {
+    border-bottom: 1px solid $line-colour-1;
+    overflow: hidden;
+    
+    > .container {
+        padding: $spacing-half 0 0 0;
+        overflow: hidden;
+        min-height: 60px;
+
+        .link {
+            display: block;
+            padding-bottom: $spacing-half;
+            color: $text-colour-1;
+            text-decoration: none;
+            font-family: $font-family-regular;
+            font-size: 1rem;
+            //border-bottom: 1px solid $line-colour-1;
+
+            .icon--before {
+                display: inline-block;
+                padding-left: $spacing-quarter;
+                transform: rotate(90deg);
+                font-size: 1.6rem;
+            }
+        }
+
+        .search-bar {
+            display: block;
+            border: none;
+
+            /deep/.container {
+                padding: $spacing-half;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width : $breakpoint-3){
+
+    .utility-bar {
+
+        > .container {
+            padding: 0 0 0 280px;
+            position: relative;
+
+            .link {
+                padding: 0 $spacing-half;
+                position: absolute;
+                top: $spacing-half;
+                left: 0;
+                border: none;
+        
+                .icon--before {
+                    display: inline-block;
+                    padding-left: $spacing-quarter;
+                    transform: rotate(90deg);
+                    font-size: 1.6rem;
+                }
+            }
+
+            .search-bar {
+                //background: pink;
+                display: block;
+                border: none;
+                overflow: hidden;
+                float: right;
+                max-width: 60px;
+                transition: max-width .4s ease-in-out;
+
+                /deep/.icon--before {
+                    cursor: pointer;
+                }
+
+                &.expanded {
+                    max-width: 350px;
+                }
+    
+                /deep/.container {
+                    padding: 0;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,63 @@
+
+.table {
+	box-sizing: border-box;
+	border: 1px solid $line-colour-1;
+	border-radius: $radius-full;
+	margin-bottom: $spacing-full;
+
+	table {
+		width: 100%;
+		box-sizing: border-box;
+
+		thead, tbody {
+
+			tr {
+
+				th, td {
+					box-sizing: border-box;
+					padding: $spacing-half;
+					border: 1px solid $line-colour-1;
+					border-width: 0 0 1px 0;
+					text-align: center;
+					font-family: $font-family-regular;
+					
+					&:first-child {
+						text-align: left;
+					}
+				}
+
+				th {
+					font-family: $font-family-bold;
+				}
+
+				&:last-child {
+
+					td {
+						border-width: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+@media only screen and (min-width : $breakpoint-3){
+
+
+	.table {
+	
+		table {
+	
+			thead, tbody {
+	
+				tr {
+	
+					th, td {
+						padding: $spacing-half $spacing-full;
+					}
+				}
+			}
+		}
+	}	
+}

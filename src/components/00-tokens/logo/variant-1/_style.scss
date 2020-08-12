@@ -1,0 +1,37 @@
+.logo {
+    display: block;
+    width: $dimension-triple;
+    margin: 0 auto $spacing-double auto;
+
+    .logo_text {
+        display: block;
+        position: absolute;
+        left: -9999px;
+        top: -9999px;
+        height: 0;
+        overflow: hidden;
+    }
+
+    &.logo--white {
+
+        svg {
+            fill: $pattern-white-1;
+        }
+    }
+
+    &.logo--black {
+
+        svg {
+            fill: $pattern-grey-1;
+        }
+    }
+    
+}
+
+@media only screen and (min-width : $breakpoint-3){
+
+    .logo {
+        width: $dimension-quadruple;
+        margin: 0 auto $spacing-full auto;
+    }
+}

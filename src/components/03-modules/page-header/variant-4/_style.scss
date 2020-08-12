@@ -1,0 +1,64 @@
+
+.page-header {
+	box-sizing: border-box;
+	padding: $spacing-double $spacing-full $spacing-half $spacing-full;
+	background: $pattern-grey-1;
+
+	.logo {
+		margin: 0;
+		width: 100px;
+
+		svg {
+			fill: $white !important;
+		}
+	}
+
+	.primary-navigation_trigger {
+		position: absolute;
+		top: $spacing-double;
+		right: $spacing-half;
+		width: $dimension-full;
+		padding: 0 !important;
+	
+		.icon--after {
+	
+			&:after {
+				font-size: $_20px;
+				color: $pattern-white-1;
+			}
+		}
+	} 
+
+	.t1, .t2, .t3, .greeting {
+		color: $pattern-white-1;
+	}
+}
+
+@media only screen and (min-width : $breakpoint-3){
+
+	.page-header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		min-height: 100px;
+		padding: 0 0 0 240px;
+		z-index: 10;
+		background: none;
+	
+		.logo {
+			position: absolute;
+			top: $spacing-full;
+			left: $spacing-double;
+		}
+
+		.primary-navigation_trigger {
+			display: none !important;
+		}
+
+		.greeting {
+			margin-top: $spacing-full;
+			padding: 0;
+		}
+	}
+}

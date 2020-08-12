@@ -1,0 +1,225 @@
+
+.product-list {
+    margin: 1em 0 2em 0;
+
+    /deep/.accordion {
+
+        .accordion_header {
+            box-sizing: border-box;
+            position: absolute;
+            top: -$spacing-full;
+            right: $spacing-full;
+            width: 140px;
+            background: #E0E4F1;
+            padding: 0 $spacing-half;
+            border-radius: $radius-full;
+            font-family: $font-family-regular;
+            font-size: $_13px;
+            line-height: $_30px;
+
+            .icon--after {
+                top: 4px;
+
+                &:after {
+                    font-size: $_18px;
+                }
+            }
+        }
+
+        &.accordion--active {
+
+            .accordion_header {
+                background: $pattern-green-1;
+                color: $pattern-white-1;
+
+                .icon--after {
+                    top: 0;
+                }
+            }
+        }
+    }
+
+    .product-list_filter {
+        margin-bottom: $spacing-double;
+
+        .visually-hidden {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+            height: 0;
+            overflow: hidden;
+        }
+
+        /deep/.check-box.checkbox--single {
+            margin: 0;
+            padding: 0;
+            border-radius: $radius-full;
+            overflow: hidden;
+
+            .label {
+                margin: 0;
+                padding: $spacing-full;
+                position: relative;
+                cursor: pointer;
+                text-align: center;
+
+                .label_text {
+                    font-size: $_14px;
+                    color: $text-colour-1;
+                    position: relative;
+                    z-index: 999;
+                }
+
+                em {
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: $pattern-white-1;
+                    
+                    &:before {
+                        opacity: 0;
+                    }
+                }
+
+                input:checked ~ em {
+                    background: $pattern-green-1;
+                }
+
+                input:checked ~ .label_text {
+                    color: $pattern-white-1;
+                    border: 10px solid red;
+                }
+                
+                input:checked ~ .product-list_filter_count {
+                    color: $pattern-white-1;
+                }
+
+                .t3 {
+                    margin: $spacing-quarter 0 0 0;
+                    font-size: $_12px;
+                    position: relative;
+                    z-index: 999;
+                }
+            }
+        }
+        
+        .prodict-list_filter--primary_filter {
+    
+            /deep/.check-box {
+    
+                .label {
+                    padding: $spacing-half $spacing-full $spacing-full $spacing-triple;
+                    text-align: left;
+
+                    &:before {
+                        content: " ";
+                        display: block;
+                        width: calc(#{$dimension-half} - #{$spacing-quarter});
+                        height: calc(#{$dimension-half} - #{$spacing-quarter});
+                        background: $line-colour-1;
+                        position: absolute;
+                        top: 50%;
+                        margin-top: -$dimension-quarter;
+                        left: $spacing-full;
+                        z-index: 999;
+                        border-radius: $radius-double;
+                    }
+                }
+
+                &.no-spot {
+
+                    .label {
+                        padding-left: $spacing-full !important;
+    
+                        &:before {
+                            display: none;
+                        }
+                    }
+                }
+
+                &.change .label:before {
+                    background: #F9A700;
+                }
+
+                &.diversity-and-inclusion .label:before {
+                    background: #15AF99;
+                }
+
+                &.management-development .label:before {
+                    background: #25647C;
+                }
+
+                &.onboarding .label:before {
+                    background: #F5762F;
+                }
+
+
+                &.performance-management .label:before {
+                    background: #355A95;
+                }
+
+                &.personal-effectiveness .label:before {
+                    background: #F8655C;
+                }
+
+                &.ethics .label:before {
+                    background: #7978C6;
+                }
+
+                &.respect .label:before {
+                    background: #BA255C;
+                }
+
+                &.customer-service .label:before {
+                    background: #24A2DF;
+                }
+
+
+                &.reorganisation .label:before {
+                    background: #D6152D;
+                }
+
+                &.employee-engagement .label:before {
+                    background: #22BFC6;
+                }
+            }
+        }
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        &.products {
+
+            li, > div, .column {
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width : $breakpoint-3){
+
+    .product-list {
+    
+        ul {
+    
+            &.products {
+    
+                li, > div, .column {
+    
+                    /deep/.card {
+                        min-height: 240px;
+                    }
+                }
+            }
+        }
+    }
+}
+

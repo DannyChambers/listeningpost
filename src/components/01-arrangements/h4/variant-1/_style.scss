@@ -1,0 +1,46 @@
+
+.h4  {
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	-ms-word-break: break-all;
+	word-break: break-word;
+	-ms-hyphens: auto;
+	-moz-hyphens: auto;
+	-webkit-hyphens: auto;
+	hyphens: auto;
+	margin: 0;
+	padding: 1em 0 .5em 0;
+	font-weight: 400;
+	line-height: 1.15;
+	font-family: $font-family-subheading;
+	color: $text-colour-1; 
+	font-size: $_18px;
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	&.h4--centred {
+		text-align: center;
+	}
+
+	&.h4--right {
+		text-align: right;
+	}
+
+	&.h4--stacked {
+		
+		span {
+			display: block;
+			font-size: .8em;
+			padding-bottom: $spacing-quarter;
+		}
+	}
+}
+
+@media only screen and (min-width : $breakpoint-4){
+
+	.h4  {
+
+	}
+}
