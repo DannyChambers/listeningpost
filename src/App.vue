@@ -1,8 +1,11 @@
 <template>
   <div id="app">
 
-    <Speech text="Good evening, Jordan. It's time to get it on.." />
-
+    <Speech text="Will there ever be a boy, who can swim as fast as a Shark.." />
+    <br/><br/>
+    <Button text="background" @click="backgroundAudio()" />
+    <br/><br/>
+    <Button text="Get messages" @click="getMessages()" />
   </div>
 </template>
 
@@ -14,7 +17,19 @@
     components: {
       ...components
     },
-    name: 'App'
+    name: 'App',
+    methods:{
+      backgroundAudio (){
+        const audio = new Audio(require('./assets/audio/sound.mp3'));
+        audio.loop = true;
+        audio.play();
+      },
+      getMessages(){
+
+        
+
+      }
+    }
   }
 </script>
 

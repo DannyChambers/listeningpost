@@ -24,7 +24,7 @@ module.exports = async ({ config, mode }) => {
         loader: 'sass-loader'
       },
     ],
-    include: path.resolve(__dirname, '../'),
+    include: path.resolve(__dirname, '../')
   });
 
   config.resolve.alias = {
